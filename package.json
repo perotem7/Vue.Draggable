@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "draggable component for vue",
   "license": "MIT",
-  "main": "dist/vuedraggable.umd.min.js",
+  "main": "src/vuedraggable.js",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve ./example/main.js --open --mode local",
