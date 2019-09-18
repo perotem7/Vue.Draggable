@@ -143,6 +143,11 @@ const props = {
     type: Object,
     required: false,
     default: null
+  },
+  complete: {
+    type: Function,
+    required: false,
+    default: null
   }
 };
 
@@ -432,6 +437,7 @@ const draggableComponent = {
       this.updatePosition(oldIndex, newIndex);
       const moved = { element: this.context.element, oldIndex, newIndex };
       this.emitChanges({ moved });
+      if (this.complete) this.complete(moved);
     },
 
     updateProperty(evt, propertyName) {
