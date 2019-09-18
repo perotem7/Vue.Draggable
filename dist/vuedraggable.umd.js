@@ -2912,6 +2912,11 @@ var vuedraggable_props = {
     type: Object,
     required: false,
     default: null
+  },
+  complete: {
+      type: Function,
+      required: false,
+      default: null
   }
 };
 var draggableComponent = {
@@ -3205,6 +3210,7 @@ var draggableComponent = {
       this.emitChanges({
         moved: moved
       });
+      if (this.complete) this.complete(moved);
     },
     updateProperty: function updateProperty(evt, propertyName) {
       evt.hasOwnProperty(propertyName) && (evt[propertyName] += this.headerOffset);
