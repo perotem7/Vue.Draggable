@@ -466,6 +466,7 @@ const draggableComponent = {
         return true;
       }
 
+
       const relatedContext = this.getRelatedContextFromMoveEvent(evt);
       const draggedContext = this.context;
       const futureIndex = this.computeFutureIndex(relatedContext, evt);
